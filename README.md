@@ -74,3 +74,11 @@ Build ECommerce Website Like Amazon by Next.js
 ### Note
 
 createMuiTheme was deprecated; consider replacing with createTheme
+
+11. Create Application Context
+    1.  define context and reducer
+    2.  set darkMode flag
+    3.  create store provider
+    4.  use it on layout
+
+$ npm install js-cookie
