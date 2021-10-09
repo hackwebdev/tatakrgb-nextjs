@@ -1,21 +1,23 @@
 import React from 'react'
 import Head from 'next/head'
-import { AppBar, Toolbar, Typography, Container } from '@mui/material'
+import { AppBar, Toolbar, Typography, Container } from '@material-ui/core'
+import useStyles from '../utils/styles'
 
 export default function Layout({ children }) {
+  const classes = useStyles()
   return (
     <div>
       <Head>
         <title>Tatak RGB</title>
       </Head>
-      <AppBar position='fixed' color='primary'>
+      <AppBar position='static' className={classes.navbar}>
         <Toolbar>
-          <Typography variant='h6'>Tatak RGB</Typography>
+          <Typography>Tatak RGB</Typography>
         </Toolbar>
       </AppBar>
-      <Container>{children}</Container>
-      <footer>
-        <Typography>All rights reserved. Next Tatak RGB</Typography>
+      <Container className={classes.main}>{children}</Container>
+      <footer className={classes.footer}>
+        <Typography>All rights reserved. Tatak RGB.</Typography>
       </footer>
     </div>
   )
